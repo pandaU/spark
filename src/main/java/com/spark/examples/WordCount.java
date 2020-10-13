@@ -55,9 +55,7 @@ public class WordCount {
                 return integerStringTuple2.swap();
             }
         });
-        //指定生成一个结果文件
         result.coalesce(1,true).saveAsTextFile(args[1]);
-        //释放资源
         sc.stop();
     }
 }
