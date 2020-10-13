@@ -6,25 +6,29 @@ import org.apache.spark.sql.types.{IntegerType, LongType, StringType, StructFiel
 
 object SqlDemo_DSL {
   def main(args: Array[String]): Unit = {
-    var conf =new SparkConf().setAppName("sparkSql")
-    var sc=new SparkContext(conf)
-    var sparkSql= new SQLContext(sc)
-    var lines =sc.textFile(args(0))
-    var personRDD=lines.map(line=>{
-      var fds =line.split(",")
-      var id =fds(0).toLong
-      var name =fds(1)
-      var age =fds(2).toInt
-      var grade =fds(3).toInt
+    val conf =new SparkConf().setAppName("sparkSql")
+    val sc=new SparkContext(conf)
+    val sparkSql= new SQLContext(sc)
+    val lines =sc.textFile(args(0))
+    val personRDD=lines.map(line=>{
+      val fds =line.split(",")
+      val id =fds(0).toLong
+      val name =fds(1)
+      val age =fds(2).toInt
+      val grade =fds(3).toInt
       Row(id,name,age,grade)
     })
-    var schema =StructType(List(
+    val schema =StructType(List(
       StructField("id",LongType,true),
       StructField("name",StringType,true),
       StructField("age",IntegerType,true),
       StructField("grade",IntegerType,true),
     ))
-    var bdf:DataFrame=sparkSql.createDataFrame(personRDD,schema)
+    val bdf:DataFrame=sparkSql.createDataFrame(personRDD,schema)
+    val data:DataFrame =bdf.select("id","name","age","grade")
+    data.show()
 
+
+    sc.stop()
   }
 }

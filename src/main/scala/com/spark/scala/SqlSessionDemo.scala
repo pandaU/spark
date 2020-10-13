@@ -1,15 +1,14 @@
 package com.spark.scala
 
-import org.apache.spark.sql.types.{IntegerType, LongType, StringType, StructField, StructType}
-import org.apache.spark.sql.{DataFrame, Row, SQLContext, SparkSession}
-import org.apache.spark.{SparkConf, SparkContext}
 
-object SqlDemo {
+import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
+import org.apache.spark.sql.types.{IntegerType, LongType, StringType, StructField, StructType}
+
+
+object SqlSessionDemo {
   def main(args: Array[String]): Unit = {
-    val conf =new SparkConf().setAppName("sparkSql")
-    val sc=new SparkContext(conf)
-    val sparkSql= new SQLContext(sc)
-    val lines =sc.textFile(args(0))
+    val spark=SparkSession.builder().appName("sparkSession_2.x").getOrCreate()
+    val lines=spark.sparkContext.textFile(args(0))
     val personRDD=lines.map(line=>{
       val fds =line.split(",")
       val id =fds(0).toLong
@@ -24,10 +23,11 @@ object SqlDemo {
       StructField("age",IntegerType,true),
       StructField("grade",IntegerType,true),
     ))
-    val bdf:DataFrame=sparkSql.createDataFrame(personRDD,schema)
-    bdf.registerTempTable("t_person")
-    val data : DataFrame=sparkSql.sql("select * from t_person order by grade desc ,age asc")
-    data.show()
-    sc.stop()
+    val df: DataFrame = spark.createDataFrame(personRDD, schema)
+    import spark.implicits._
+    val result: Dataset[Row] = df.where($"id" > 6).orderBy($"id" desc)
+    //result.write.jdbc()
+    result.show()
+    spark.stop()
   }
 }

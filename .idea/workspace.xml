@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27212447-8d90-471f-9a6b-1be33636cbfc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_spark_spark_sql_kafka_0_10_2_12_3_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_12_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spark-leaning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spark-leaning.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spark/examples/WordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spark/examples/WordCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/spark/examples/WordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spark/examples/WordCount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spark-leaning-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/spark-leaning-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sparkWordCount.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/sparkWordCount.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/scala/SqlDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/scala/SqlDemo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/scala/SqlDemo_DSL.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/scala/SqlDemo_DSL.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/scala/WordCount.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/scala/WordCount.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jenkins/JenkinsDemo" />
@@ -116,7 +118,10 @@
       <workItem from="1602467467338" duration="6000" />
       <workItem from="1602482066083" duration="106000" />
       <workItem from="1602556222322" duration="644000" />
-      <workItem from="1602557886322" duration="3258000" />
+      <workItem from="1602557886322" duration="4226000" />
+      <workItem from="1602566903152" duration="3548000" />
+      <workItem from="1602571238468" duration="1392000" />
+      <workItem from="1602572647974" duration="3209000" />
     </task>
     <servers />
   </component>
@@ -128,10 +133,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1601367789643" />
-    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1602560426327">
+    <state x="651" y="79" key="#Scala" timestamp="1602567059625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602560426327" />
+    <state x="651" y="79" key="#Scala/0.0.1920.1040@0.0.1920.1040" timestamp="1602567059625" />
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1602566808706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602566808706" />
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1601193515196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -148,26 +157,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="699" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602482169564" />
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom" timestamp="1602565789656">
+    <state width="1877" height="239" key="GridCell.Tab.0.bottom" timestamp="1602572631680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602565789656" />
-    <state width="1877" height="149" key="GridCell.Tab.0.center" timestamp="1602565789655">
+    <state width="1877" height="239" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602572631680" />
+    <state width="1877" height="239" key="GridCell.Tab.0.center" timestamp="1602572631680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602565789655" />
-    <state width="1877" height="149" key="GridCell.Tab.0.left" timestamp="1602565789655">
+    <state width="1877" height="239" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602572631680" />
+    <state width="1877" height="239" key="GridCell.Tab.0.left" timestamp="1602572631680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602565789655" />
-    <state width="1877" height="149" key="GridCell.Tab.0.right" timestamp="1602565789656">
+    <state width="1877" height="239" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602572631680" />
+    <state width="1877" height="239" key="GridCell.Tab.0.right" timestamp="1602572631680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="149" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602565789656" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1601369644168">
+    <state width="1877" height="239" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602572631680" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1602571487972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601369644168" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602571487972" />
+    <state x="661" y="252" width="598" height="536" key="find.popup" timestamp="1602573403277">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="252" width="598" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602573403277" />
     <state x="334" y="180" key="new project wizard" timestamp="1601260195356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

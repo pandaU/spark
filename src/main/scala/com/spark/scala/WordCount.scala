@@ -6,13 +6,13 @@ import org.apache.spark.{SparkConf, SparkContext}
 object WordCount {
   def main(args: Array[String]): Unit = {
     print("helloWord")
-    var conf =new SparkConf().setAppName("scalaWordCount")
-    var sc =new SparkContext(conf)
-    var lines: RDD[String] = sc.textFile(args(0))
-    var word: RDD[String] =lines.flatMap(_.split(" "))
-    var map: RDD[(String,Int)] =word.map((_,1))
-    var result: RDD[(String,Int)] =map.reduceByKey(_+_)
-    var sort: RDD[(String,Int)] =result.sortBy(_._2)
+    val conf =new SparkConf().setAppName("scalaWordCount")
+    val sc =new SparkContext(conf)
+    val lines: RDD[String] = sc.textFile(args(0))
+    val word: RDD[String] =lines.flatMap(_.split(" "))
+    val map: RDD[(String,Int)] =word.map((_,1))
+    val result: RDD[(String,Int)] =map.reduceByKey(_+_)
+    val sort: RDD[(String,Int)] =result.sortBy(_._2)
     sort.saveAsTextFile(args(1))
     sc.stop()
   }
